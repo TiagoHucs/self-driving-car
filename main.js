@@ -53,6 +53,8 @@ function animate() {
 
     ctx.restore();
 
+    cars = cars.filter((car) => car.damaged == false);
+
     informations();
 
     requestAnimationFrame(animate);
@@ -87,7 +89,7 @@ function generateTraffic(n) {
 function mutateCar(car) {
     if (localStorage.getItem("bestBrain")) {
         car.brain = getBrain();
-        NeuralNetwork.mutate(car.brain, 0.1);
+        NeuralNetwork.mutate(car.brain, 0.05);
     }
 }
 
