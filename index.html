@@ -1,14 +1,19 @@
 <!DOCTYPE html>
+
 <head>
     <title>self driving car</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <canvas id="myCanvas"></canvas>
 
     <div>
-        <p id='message'></p>
-        <button onclick="saveBrain()">save</button>
+        <p id='population'></p>
+        <p id='distance'></p>
+        <p id='traffic'></p>
+        <button onclick="saveBrain()">save brain</button>
+        <button onclick="discard()">delete brain</button>
     </div>
     <script src="network.js"></script>
     <script src="sensor.js"></script>
